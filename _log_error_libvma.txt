@@ -1,0 +1,1116 @@
+[    0s] Memory limit set to 181648910KB
+[    0s] Using BUILD_ROOT=/obs/cache/worker/root_31
+[    0s] Using BUILD_ARCH=riscv64
+[    0s] Doing docker build
+[    0s] 
+[    0s] 
+[    0s] oerv-obs-10 started "build _service:tar_scm:libvma.spec" at Sun Mar 31 20:16:15 UTC 2024.
+[    0s] 
+[    0s] Building libvma for project 'openEuler:24.03' repository 'mainline_riscv64' arch 'riscv64' srcmd5 '32da90e402f7a135c6ae5e83c88bb43b'
+[    0s] 
+[    0s] processing recipe /obs/cache/worker/root_31/.build-srcdir/_service:tar_scm:libvma.spec ...
+[    1s] running changelog2spec --target rpm --file /obs/cache/worker/root_31/.build-srcdir/_service:tar_scm:libvma.spec
+[    1s] init_buildsystem --configdir /obs/run/worker/worker/31/build/configs --cachedir /var/cache/build --prepare --clean --rpmlist /obs/cache/worker/root_31/.build.rpmlist /obs/cache/worker/root_31/.build-srcdir/_service:tar_scm:libvma.spec build ...
+[    6s] cycle: filesystem -> bash
+[    6s]   breaking dependency filesystem -> bash
+[    6s] cycle: rpm-libs -> rpm
+[    6s]   breaking dependency rpm -> rpm-libs
+[    6s] cycle: perl-libs -> perl-Carp
+[    6s]   breaking dependency perl-libs -> perl-Carp
+[    6s] cycle: perl-libs -> perl-Exporter
+[    6s]   breaking dependency perl-Exporter -> perl-libs
+[    6s] cycle: perl-libs -> perl-Exporter -> perl-Carp
+[    6s]   breaking dependency perl-Carp -> perl-libs
+[    6s] cycle: perl-Exporter -> perl-Carp
+[    6s]   breaking dependency perl-Exporter -> perl-Carp
+[    6s] cycle: perl -> perl-PathTools
+[    6s]   breaking dependency perl -> perl-PathTools
+[    6s] cycle: perl -> perl-File-Path -> perl-PathTools
+[    6s]   breaking dependency perl -> perl-File-Path
+[    6s] cycle: perl-constant -> perl
+[    6s]   breaking dependency perl -> perl-constant
+[    6s] cycle: perl -> perl-File-Temp -> perl-PathTools
+[    6s]   breaking dependency perl-File-Temp -> perl-PathTools
+[    6s] cycle: perl -> perl-File-Temp
+[    6s]   breaking dependency perl-File-Temp -> perl
+[    6s] cycle: perl -> perl-File-Temp -> perl-File-Path -> perl-PathTools
+[    6s]   breaking dependency perl-File-Temp -> perl-File-Path
+[    6s] cycle: perl-constant -> perl -> perl-File-Temp
+[    6s]   breaking dependency perl -> perl-File-Temp
+[    6s] [1/32] preinstalling filesystem...
+[    6s] [2/32] preinstalling glibc...
+[    7s] [3/32] preinstalling libatomic...
+[    7s] [4/32] preinstalling libatomic_ops...
+[    7s] [5/32] preinstalling libdb...
+[    7s] [6/32] preinstalling libgpg-error...
+[    7s] [7/32] preinstalling lz4...
+[    7s] [8/32] preinstalling pcre2...
+[    7s] [9/32] preinstalling xz-libs...
+[    7s] [10/32] preinstalling zlib...
+[    7s] [11/32] preinstalling zstd...
+[    7s] [12/32] preinstalling attr...
+[    7s] [13/32] preinstalling bash...
+[    8s] [14/32] preinstalling pesign-obs-integration...
+[    8s] [15/32] preinstalling selinux-policy-targeted...
+[    8s] [16/32] preinstalling bzip2...
+[    8s] [17/32] preinstalling cmake...
+[    9s] [18/32] preinstalling compat-openssl11-libs...
+[    9s] [19/32] preinstalling libacl...
+[   10s] [20/32] preinstalling libcap...
+[   10s] [21/32] preinstalling libgcrypt...
+[   10s] [22/32] preinstalling libselinux...
+[   10s] [23/32] preinstalling lua...
+[   10s] [24/32] preinstalling openssl-libs...
+[   10s] [25/32] preinstalling popt...
+[   10s] [26/32] preinstalling iproute...
+[   10s] [27/32] preinstalling systemd-libs...
+[   10s] [28/32] preinstalling rpm...
+[   10s] [29/32] preinstalling dbus-libs...
+[   10s] [30/32] preinstalling dhcp...
+[   11s] [31/32] preinstalling rpm-libs...
+[   11s] [32/32] preinstalling digest-list-tools...
+[   11s] 
+[   11s] [1/21] preinstalling coreutils...
+[   13s] [2/21] preinstalling libsmartcols...
+[   13s] [3/21] preinstalling libuuid...
+[   13s] [4/21] preinstalling libxcrypt...
+[   13s] [5/21] preinstalling ncurses-libs...
+[   13s] [6/21] preinstalling pcre...
+[   13s] [7/21] preinstalling grep...
+[   13s] [8/21] preinstalling libblkid...
+[   13s] [9/21] preinstalling libmount...
+[   13s] [10/21] preinstalling util-linux...
+[   14s] [11/21] preinstalling perl-Exporter...
+[   14s] [12/21] preinstalling perl-Carp...
+[   14s] [13/21] preinstalling perl-libs...
+[   14s] [14/21] preinstalling perl-parent...
+[   14s] [15/21] preinstalling perl-Digest-MD5...
+[   14s] [16/21] preinstalling perl-Scalar-List-Utils...
+[   14s] [17/21] preinstalling perl...
+[   14s] [18/21] preinstalling perl-constant...
+[   14s] [19/21] preinstalling perl-PathTools...
+[   14s] [20/21] preinstalling perl-File-Temp...
+[   14s] [21/21] preinstalling perl-File-Path...
+[   15s] copying packages...
+[   15s] reordering...cycle: coreutils -> bash
+[   15s]   breaking dependency coreutils -> bash
+[   15s] cycle: coreutils -> info
+[   15s]   breaking dependency coreutils -> info
+[   15s] cycle: glibc -> basesystem -> filesystem -> coreutils -> gmp -> pkgconf
+[   15s]   breaking dependency coreutils -> gmp
+[   15s] cycle: glibc -> basesystem -> filesystem -> coreutils
+[   15s]   breaking dependency coreutils -> glibc
+[   15s] cycle: glibc -> basesystem -> filesystem -> coreutils -> libacl
+[   15s]   breaking dependency coreutils -> libacl
+[   15s] cycle: glibc -> basesystem -> filesystem -> coreutils -> attr
+[   15s]   breaking dependency coreutils -> attr
+[   15s] cycle: coreutils -> libcap
+[   15s]   breaking dependency libcap -> coreutils
+[   15s] cycle: coreutils -> libcap -> bash
+[   15s]   breaking dependency coreutils -> libcap
+[   15s] cycle: glibc -> basesystem -> filesystem -> coreutils -> openssl-libs
+[   15s]   breaking dependency coreutils -> openssl-libs
+[   15s] cycle: glibc -> basesystem -> filesystem -> coreutils -> libselinux
+[   15s]   breaking dependency filesystem -> coreutils
+[   15s] cycle: glibc -> basesystem -> filesystem -> bash -> coreutils -> libselinux
+[   15s]   breaking dependency filesystem -> bash
+[   15s] cycle: glibc -> basesystem -> filesystem -> setup -> openEuler-release -> coreutils -> libselinux
+[   15s]   breaking dependency filesystem -> setup
+[   15s] cycle: glibc -> basesystem -> filesystem -> ncurses-libs
+[   15s]   breaking dependency glibc -> basesystem
+[   15s] cycle: glibc -> glibc-common -> bash -> coreutils -> libselinux
+[   15s]   breaking dependency glibc-common -> bash
+[   15s] cycle: glibc -> glibc-common -> coreutils -> libselinux
+[   15s]   breaking dependency libselinux -> glibc
+[   15s] cycle: glibc -> glibc-common -> coreutils -> libselinux -> pcre2
+[   15s]   breaking dependency glibc-common -> coreutils
+[   15s] cycle: glibc -> glibc-common
+[   15s]   breaking dependency glibc-common -> glibc
+[   15s] cycle: glibc -> glibc-common -> libselinux -> pcre2
+[   15s]   breaking dependency pcre2 -> glibc
+[   15s] cycle: glibc -> glibc-common -> libselinux -> pcre2 -> readline
+[   15s]   breaking dependency readline -> glibc
+[   15s] cycle: glibc -> glibc-common -> libselinux -> pcre2 -> readline -> ncurses-libs
+[   15s]   breaking dependency libselinux -> pcre2
+[   15s] cycle: libselinux -> libsepol -> coreutils
+[   15s]   breaking dependency libsepol -> coreutils
+[   15s] cycle: libselinux -> libsepol -> bash -> coreutils
+[   15s]   breaking dependency bash -> coreutils
+[   15s] cycle: glibc -> glibc-common -> libselinux -> libsepol -> bash -> filesystem -> ncurses-libs
+[   15s]   breaking dependency bash -> filesystem
+[   15s] cycle: glibc -> glibc-common -> libselinux -> libsepol -> bash
+[   15s]   breaking dependency libsepol -> bash
+[   15s] cycle: glibc -> glibc-common -> libselinux -> libsepol
+[   15s]   breaking dependency glibc -> glibc-common
+[   15s] cycle: glibc -> filesystem -> ncurses-libs
+[   15s]   breaking dependency ncurses-libs -> glibc
+[   15s] cycle: openssl-libs -> crypto-policies -> python3
+[   15s]   breaking dependency python3 -> openssl-libs
+[   15s] cycle: crypto-policies -> python3 -> libnsl2 -> libtirpc -> krb5-libs
+[   15s]   breaking dependency python3 -> libnsl2
+[   15s] cycle: crypto-policies -> python3 -> libtirpc -> krb5-libs
+[   15s]   breaking dependency python3 -> libtirpc
+[   15s] cycle: pam -> libpwquality
+[   15s]   breaking dependency pam -> libpwquality
+[   15s] cycle: rpm -> rpm-libs
+[   15s]   breaking dependency rpm -> rpm-libs
+[   15s] cycle: perl-libs -> perl-Carp
+[   15s]   breaking dependency perl-libs -> perl-Carp
+[   15s] cycle: perl-libs -> perl-Exporter
+[   15s]   breaking dependency perl-libs -> perl-Exporter
+[   15s] cycle: perl-Carp -> perl-Exporter
+[   15s]   breaking dependency perl-Exporter -> perl-Carp
+[   15s] cycle: perl -> perl-PathTools
+[   15s]   breaking dependency perl -> perl-PathTools
+[   15s] cycle: perl -> perl-ExtUtils-MakeMaker
+[   15s]   breaking dependency perl -> perl-ExtUtils-MakeMaker
+[   15s] cycle: perl -> perl-File-Path -> perl-PathTools
+[   15s]   breaking dependency perl -> perl-File-Path
+[   15s] cycle: perl -> perl-Getopt-Long -> perl-Pod-Usage
+[   15s]   breaking dependency perl -> perl-Getopt-Long
+[   15s] cycle: perl -> perl-Locale-Maketext
+[   15s]   breaking dependency perl -> perl-Locale-Maketext
+[   15s] cycle: perl -> perl-Math-BigInt
+[   15s]   breaking dependency perl -> perl-Math-BigInt
+[   15s] cycle: perl -> perl-Pod-Simple
+[   15s]   breaking dependency perl -> perl-Pod-Simple
+[   15s] cycle: perl -> perl-Socket
+[   15s]   breaking dependency perl -> perl-Socket
+[   15s] cycle: perl -> perl-Storable
+[   15s]   breaking dependency perl -> perl-Storable
+[   15s] cycle: perl -> perl-Text-Tabs+Wrap
+[   15s]   breaking dependency perl -> perl-Text-Tabs+Wrap
+[   15s] cycle: perl -> perl-Time-Local -> perl-constant
+[   15s]   breaking dependency perl -> perl-Time-Local
+[   15s] cycle: perl -> perl-Unicode-Normalize
+[   15s]   breaking dependency perl -> perl-Unicode-Normalize
+[   15s] cycle: perl -> perl-constant
+[   15s]   breaking dependency perl -> perl-constant
+[   15s] cycle: perl -> perl-experimental
+[   15s]   breaking dependency perl -> perl-experimental
+[   15s] cycle: perl -> perl-threads
+[   15s]   breaking dependency perl -> perl-threads
+[   15s] cycle: perl -> perl-threads-shared
+[   15s]   breaking dependency perl -> perl-threads-shared
+[   15s] cycle: perl -> perl-version
+[   15s]   breaking dependency perl -> perl-version
+[   15s] cycle: perl -> perl-Archive-Tar
+[   15s]   breaking dependency perl -> perl-Archive-Tar
+[   15s] cycle: perl-B-Debug -> perl
+[   15s]   breaking dependency perl -> perl-B-Debug
+[   15s] cycle: perl -> perl-CPAN-Meta -> perl-CPAN-Meta-Requirements
+[   15s]   breaking dependency perl -> perl-CPAN-Meta
+[   15s] cycle: perl -> perl-CPAN-Meta-Requirements
+[   15s]   breaking dependency perl -> perl-CPAN-Meta-Requirements
+[   15s] cycle: perl -> perl-CPAN-Meta-YAML
+[   15s]   breaking dependency perl -> perl-CPAN-Meta-YAML
+[   15s] cycle: perl -> perl-Compress-Raw-Bzip2
+[   15s]   breaking dependency perl -> perl-Compress-Raw-Bzip2
+[   15s] cycle: perl -> perl-Compress-Raw-Zlib
+[   15s]   breaking dependency perl -> perl-Compress-Raw-Zlib
+[   15s] cycle: perl -> perl-Config-Perl-V
+[   15s]   breaking dependency perl -> perl-Config-Perl-V
+[   15s] cycle: perl -> perl-Data-Dumper
+[   15s]   breaking dependency perl -> perl-Data-Dumper
+[   15s] cycle: perl -> perl-Devel-PPPort
+[   15s]   breaking dependency perl -> perl-Devel-PPPort
+[   15s] cycle: perl -> perl-Digest-SHA
+[   15s]   breaking dependency perl -> perl-Digest-SHA
+[   15s] cycle: perl -> perl-Encode
+[   15s]   breaking dependency perl -> perl-Encode
+[   15s] cycle: perl -> perl-Env
+[   15s]   breaking dependency perl -> perl-Env
+[   15s] cycle: perl -> perl-ExtUtils-Command
+[   15s]   breaking dependency perl -> perl-ExtUtils-Command
+[   15s] cycle: perl -> perl-ExtUtils-Install
+[   15s]   breaking dependency perl -> perl-ExtUtils-Install
+[   15s] cycle: perl -> perl-ExtUtils-Manifest
+[   15s]   breaking dependency perl -> perl-ExtUtils-Manifest
+[   15s] cycle: perl -> perl-ExtUtils-ParseXS
+[   15s]   breaking dependency perl -> perl-ExtUtils-ParseXS
+[   15s] cycle: perl -> perl-File-Fetch -> perl-PathTools
+[   15s]   breaking dependency perl -> perl-File-Fetch
+[   15s] cycle: perl -> perl-File-Temp -> perl-PathTools
+[   15s]   breaking dependency perl -> perl-File-Temp
+[   15s] cycle: perl -> perl-Filter
+[   15s]   breaking dependency perl -> perl-Filter
+[   15s] cycle: perl -> perl-Filter-Simple -> perl-Filter
+[   15s]   breaking dependency perl -> perl-Filter-Simple
+[   15s] cycle: perl -> perl-HTTP-Tiny
+[   15s]   breaking dependency perl -> perl-HTTP-Tiny
+[   15s] cycle: perl -> perl-IO-Compress
+[   15s]   breaking dependency perl -> perl-IO-Compress
+[   15s] cycle: perl -> perl-IO-Socket-IP
+[   15s]   breaking dependency perl -> perl-IO-Socket-IP
+[   15s] cycle: perl -> perl-IPC-Cmd -> perl-ExtUtils-MakeMaker
+[   15s]   breaking dependency perl -> perl-IPC-Cmd
+[   15s] cycle: perl -> perl-IPC-SysV
+[   15s]   breaking dependency perl -> perl-IPC-SysV
+[   15s] cycle: perl -> perl-JSON-PP
+[   15s]   breaking dependency perl -> perl-JSON-PP
+[   15s] cycle: perl -> perl-Locale-Codes -> perl-constant
+[   15s]   breaking dependency perl -> perl-Locale-Codes
+[   15s] cycle: perl -> perl-Math-BigInt-FastCalc -> perl-Math-BigInt
+[   15s]   breaking dependency perl -> perl-Math-BigInt-FastCalc
+[   15s] cycle: perl -> perl-Module-CoreList
+[   15s]   breaking dependency perl -> perl-Module-CoreList
+[   15s] cycle: perl -> perl-Module-Load -> perl-PathTools
+[   15s]   breaking dependency perl -> perl-Module-Load
+[   15s] cycle: perl -> perl-Module-Load-Conditional
+[   15s]   breaking dependency perl -> perl-Module-Load-Conditional
+[   15s] cycle: perl -> perl-Module-Metadata
+[   15s]   breaking dependency perl -> perl-Module-Metadata
+[   15s] cycle: perl -> perl-Params-Check
+[   15s]   breaking dependency perl -> perl-Params-Check
+[   15s] cycle: perl -> perl-Pod-Checker
+[   15s]   breaking dependency perl -> perl-Pod-Checker
+[   15s] cycle: perl -> perl-Pod-Parser
+[   15s]   breaking dependency perl -> perl-Pod-Parser
+[   15s] cycle: perl -> perl-Pod-Perldoc
+[   15s]   breaking dependency perl -> perl-Pod-Perldoc
+[   15s] cycle: perl -> perl-Pod-Usage
+[   15s]   breaking dependency perl -> perl-Pod-Usage
+[   15s] cycle: perl -> perl-Sys-Syslog
+[   15s]   breaking dependency perl -> perl-Sys-Syslog
+[   15s] cycle: perl -> perl-Term-Cap
+[   15s]   breaking dependency perl -> perl-Term-Cap
+[   15s] cycle: perl -> perl-Test-Harness
+[   15s]   breaking dependency perl -> perl-Test-Harness
+[   15s] cycle: perl -> perl-Test-Simple
+[   15s]   breaking dependency perl -> perl-Test-Simple
+[   15s] cycle: perl -> perl-Text-Balanced
+[   15s]   breaking dependency perl -> perl-Text-Balanced
+[   15s] cycle: perl -> perl-Thread-Queue -> perl-threads-shared
+[   15s]   breaking dependency perl -> perl-Thread-Queue
+[   15s] cycle: perl -> perl-Unicode-Collate -> perl-PathTools
+[   15s]   breaking dependency perl -> perl-Unicode-Collate
+[   15s] cycle: perl -> perl-autodie
+[   15s]   breaking dependency perl -> perl-autodie
+[   15s] cycle: perl -> perl-bignum -> perl-Math-BigInt
+[   15s]   breaking dependency perl -> perl-bignum
+[   15s] cycle: perl -> perl-Encode-devel
+[   15s]   breaking dependency perl -> perl-Encode-devel
+[   15s] cycle: perl -> perl-libnet
+[   15s]   breaking dependency perl -> perl-libnet
+[   15s] cycle: perl -> perl-podlators
+[   15s]   breaking dependency perl -> perl-podlators
+[   15s] cycle: libxcrypt-devel -> glibc-devel
+[   15s]   breaking dependency glibc-devel -> libxcrypt-devel
+[   15s] cycle: cmake-data -> cmake
+[   15s]   breaking dependency cmake -> cmake-data
+[   15s] cycle: nss-util -> nss
+[   15s]   breaking dependency nss -> nss-util
+[   15s] cycle: nss-softokn -> nss-util -> nss
+[   15s]   breaking dependency nss -> nss-softokn
+[   15s] cycle: selinux-policy-targeted -> selinux-policy
+[   15s]   breaking dependency selinux-policy -> selinux-policy-targeted
+[   15s] cycle: perl-Getopt-Long -> perl-Pod-Usage
+[   15s]   breaking dependency perl-Pod-Usage -> perl-Getopt-Long
+[   15s] cycle: perl-Getopt-Long -> perl-Pod-Usage -> perl-podlators -> perl-Encode
+[   15s]   breaking dependency perl-podlators -> perl-Encode
+[   15s] cycle: perl-Getopt-Long -> perl-Pod-Usage -> perl-podlators
+[   15s]   breaking dependency perl-podlators -> perl-Getopt-Long
+[   15s] cycle: perl-Getopt-Long -> perl-Pod-Usage -> perl-podlators -> perl-Pod-Simple -> perl-Encode
+[   15s]   breaking dependency perl-Encode -> perl-Getopt-Long
+[   15s] cycle: perl-Getopt-Long -> perl-Pod-Usage -> perl-podlators -> perl-Pod-Simple
+[   15s]   breaking dependency perl-podlators -> perl-Pod-Simple
+[   15s] cycle: perl-Pod-Usage -> perl-podlators
+[   15s]   breaking dependency perl-podlators -> perl-Pod-Usage
+[   15s] cycle: perl-Getopt-Long -> perl-Pod-Usage -> perl-Pod-Perldoc -> perl-Pod-Simple
+[   15s]   breaking dependency perl-Pod-Perldoc -> perl-Pod-Simple
+[   15s] cycle: device-mapper -> systemd -> cryptsetup
+[   15s]   breaking dependency systemd -> cryptsetup
+[   15s] cycle: perl-ExtUtils-Install -> perl-ExtUtils-MakeMaker
+[   15s]   breaking dependency perl-ExtUtils-MakeMaker -> perl-ExtUtils-Install
+[   16s] done
+[   16s] Warning: cross compile not possible due to missing static binaries. please install build-initvm package for that purpose.
+[   16s]          check that the right architecture is available for your build host, you need  for this one.
+[   16s] booting docker...
+[   16s] 
+[   16s] 2nd stage started in virtual machine
+[   16s] machine type: riscv64
+[   16s] Linux version: 6.7.5-200.fc39.x86_64 #1 SMP PREEMPT_DYNAMIC Sat Feb 17 17:20:08 UTC 2024
+[   16s] Time: Sun Mar 31 20:16:31 UTC 2024
+[   17s] WARNING: udev not running, creating extra device nodes
+[   17s] processing recipe /.build-srcdir/_service:tar_scm:libvma.spec ...
+[   17s] init_buildsystem --configdir /.build/configs --cachedir /var/cache/build /.build-srcdir/_service:tar_scm:libvma.spec build ...
+[   17s] initializing rpm db...
+[   18s] querying package ids...
+[   27s] [1/292] installing cmake-filesystem-3.27.9-2.oe2403
+[   32s] [2/292] installing fuse-common-3.16.2-1.oe2403
+[   38s] [3/292] installing kernel-headers-6.6.0-14.0.0.10.oe2403
+[   52s] [4/292] installing ncurses-base-6.4-8.oe2403
+[   60s] [5/292] installing openEuler-gpg-keys-1.0-3.2.oe2403
+[   61s] [6/292] installing python-setuptools-69.1.0-1.oe2403
+[   70s] [7/292] installing qt5-srpm-macros-5.15.10-2.oe2403
+[   75s] [8/292] installing tzdata-2024a-1.oe2403
+[   83s] [9/292] installing openEuler-repos-1.0-3.2.oe2403
+[   89s] [10/292] installing ncurses-libs-6.4-8.oe2403
+[  100s] [11/292] installing readline-8.2-2.oe2403
+[  110s] [12/292] installing filesystem-3.16-5.oe2403
+[  115s] warning: group mail does not exist - using root
+[  115s] [13/292] installing emacs-filesystem-1:29.1-1.oe2403
+[  121s] [14/292] installing libgcc-12.3.1-18.oe2403
+[  126s] [15/292] installing pcre2-10.42-6.oe2403
+[  129s] [16/292] installing glibc-2.38-23.oe2403
+[  138s] [17/292] installing brotli-1.1.0-1.oe2403
+[  145s] [18/292] installing cpio-2.14-3.oe2403
+[  152s] [19/292] installing diffutils-3.10-2.oe2403
+[  157s] [20/292] installing expat-2.5.0-1.oe2403
+[  160s] [21/292] installing ipcalc-1.0.3-1.oe2403
+[  163s] [22/292] installing jansson-2.14-3.oe2403
+[  168s] [23/292] installing json-c-0.17-1.oe2403
+[  171s] [24/292] installing keyutils-libs-1.6.3-5.oe2403
+[  176s] [25/292] installing libargon2-20190702-3.oe2403
+[  182s] [26/292] installing libatomic-12.3.1-18.oe2403
+[  185s] [27/292] installing libatomic_ops-7.8.2-2.oe2403
+[  190s] [28/292] installing libcap-ng-0.8.3-1.oe2403
+[  196s] [29/292] installing libev-4.33-3.oe2403
+[  202s] [30/292] installing libffi-3.4.4-3.oe2403
+[  209s] [31/292] installing libgomp-12.3.1-18.oe2403
+[  215s] [32/292] installing libgpg-error-1.47-1.oe2403
+[  224s] [33/292] installing libibumad-50.0-5.oe2403
+[  231s] [34/292] installing libmnl-1.0.5-2.oe2403
+[  239s] [35/292] installing libnfnetlink-1.0.2-2.oe2403
+[  251s] [36/292] installing libnghttp2-1.58.0-1.oe2403
+[  258s] [37/292] installing libnl3-3.7.0-3.oe2403
+[  265s] [38/292] installing libpcap-14:1.10.4-1.oe2403
+[  277s] [39/292] installing libsigsegv-2.14-1.oe2403
+[  283s] [40/292] installing libsmartcols-2.39.1-4.oe2403
+[  292s] [41/292] installing libtasn1-4.19.0-1.oe2403
+[  298s] [42/292] installing libtool-ltdl-2.4.7-3.oe2403
+[  303s] [43/292] installing libunistring-1.1-2.oe2403
+[  307s] [44/292] installing libuuid-2.39.1-4.oe2403
+[  313s] [45/292] installing libuv-1:1.47.0-2.oe2403
+[  320s] [46/292] installing libxcrypt-4.4.36-1.oe2403
+[  328s] [47/292] installing lz4-1.9.4-2.oe2403
+[  336s] [48/292] installing m4-1.4.19-3.oe2403
+[  342s] [49/292] installing nspr-4.35.0-2.oe2403
+[  347s] [50/292] installing pkgconf-1.9.5-1.oe2403
+[  349s] [51/292] installing which-2.21-15.oe2403
+[  353s] [52/292] installing xz-libs-5.4.4-1.oe2403
+[  357s] [53/292] installing zlib-1.3.1-1.oe2403
+[  362s] [54/292] installing attr-2.5.1-4.oe2403
+[  366s] [55/292] installing libstdc++-12.3.1-18.oe2403
+[  370s] [56/292] installing psmisc-23.6-1.oe2403
+[  375s] [57/292] installing gdbm-1:1.23-2.oe2403
+[  379s] [58/292] installing libsepol-3.5-3.oe2403
+[  382s] [59/292] installing bash-5.2.15-5.oe2403
+[  386s] [60/292] installing hwdata-0.372-2.oe2403
+[  391s] [61/292] installing libstdc++-devel-12.3.1-18.oe2403
+[  397s] [62/292] installing audit-libs-1:3.1.2-1.oe2403
+[  402s] [63/292] installing file-libs-5.45-1.oe2403
+[  410s] [64/292] installing gmp-1:6.3.0-2.oe2403
+[  412s] [65/292] installing libacl-2.3.1-2.oe2403
+[  416s] [66/292] installing libgcrypt-1.10.2-1.oe2403
+[  419s] [67/292] installing libibverbs-50.0-5.oe2403
+[  423s] [68/292] installing libpng-2:1.6.40-1.oe2403
+[  426s] [69/292] installing p11-kit-0.25.0-2.oe2403
+[  430s] [70/292] installing cyrus-sasl-lib-2.1.28-2.oe2403
+[  433s] [71/292] installing fuse-2.9.9-11.oe2403
+[  437s] [72/292] installing gc-8.2.4-1.oe2403
+[  441s] [73/292] installing libdb-5.3.28-41.oe2403
+[  445s] [74/292] installing libnetfilter_conntrack-1.0.9-4.oe2403
+[  448s] [75/292] installing libnl3-devel-3.7.0-3.oe2403
+[  456s] [76/292] installing libselinux-3.5-3.oe2403
+[  462s] [77/292] installing libxml2-2.11.5-2.oe2403
+[  466s] [78/292] installing zstd-1.5.5-1.oe2403
+[  471s] [79/292] installing pcre-8.45-5.oe2403
+[  478s] [80/292] installing perl-libs-4:5.38.0-6.oe2403
+[  487s] [81/292] installing ncurses-6.4-8.oe2403
+[  492s] [82/292] installing perl-parent-1:0.241-1.oe2403
+[  498s] [83/292] installing perl-perlfaq-5.20230812-1.oe2403
+[  502s] [84/292] installing isl-0.24-2.oe2403
+[  509s] [85/292] installing mpfr-4.2.1-1.oe2403
+[  518s] [86/292] installing perl-Exporter-5.77-1.oe2403
+[  525s] [87/292] installing file-5.45-1.oe2403
+[  530s] [88/292] installing librdmacm-50.0-5.oe2403
+[  534s] [89/292] installing patch-2.7.6-20.oe2403
+[  540s] [90/292] installing sed-4.9-3.oe2403
+[  545s] [91/292] installing acl-2.3.1-2.oe2403
+[  550s] [92/292] installing iptables-libs-1.8.9-2.oe2403
+[  555s] [93/292] installing glibc-common-2.38-23.oe2403
+[  566s] [94/292] installing coreutils-9.4-3.oe2403
+[  571s] [95/292] installing crontabs-1.11-23.oe2403
+[  575s] [96/292] installing elfutils-default-yama-scope-0.190-2.oe2403
+[  585s] [97/292] installing perl-Carp-1.50-419.oe2403
+[  590s] [98/292] installing perl-Perl-OSType-1.010-422.oe2403
+[  595s] [99/292] installing perl-Pod-Escapes-1:1.07_01-1.oe2403
+[  601s] [100/292] installing perl-Term-ANSIColor-5.01-2.oe2403
+[  607s] [101/292] installing publicsuffix-list-20240108-1.oe2403
+[  613s] [102/292] installing bzip2-1.0.8-6.oe2403
+[  622s] [103/292] installing gzip-1.12-4.oe2403
+[  628s] [104/292] installing libmpc-1.3.1-1.oe2403
+[  635s] [105/292] installing libseccomp-2.5.4-2.oe2403
+[  641s] [106/292] installing popt-1.19-2.oe2403
+[  645s] [107/292] installing grep-3.11-1.oe2403
+[  648s] [108/292] installing info-7.0.3-3.oe2403
+[  653s] [109/292] installing libblkid-2.39.1-4.oe2403
+[  658s] [110/292] installing libidn2-2.3.4-1.oe2403
+[  664s] [111/292] installing slang-2.3.3-2.oe2403
+[  672s] [112/292] installing tar-2:1.35-2.oe2403
+[  676s] [113/292] installing tcl-1:8.6.14-1.oe2403
+[  682s] [114/292] installing groff-base-1.23.0-2.oe2403
+[  687s] [115/292] installing jsoncpp-1.9.5-3.oe2403
+[  690s] [116/292] installing lua-5.4.6-1.oe2403
+[  694s] [117/292] installing perl-MIME-Base64-3.16-2.oe2403
+[  696s] [118/292] installing glibc-devel-2.38-23.oe2403
+[  704s] [119/292] installing gawk-5.2.2-1.oe2403
+[  712s] [120/292] installing guile-5:2.2.7-4.oe2403
+[  725s] [121/292] installing perl-PerlIO-via-QuotedPrint-0.10-1.oe2403
+[  731s] [122/292] installing zip-3.0-32.oe2403
+[  742s] [123/292] installing libfdisk-2.39.1-4.oe2403
+[  749s] [124/292] installing libxcrypt-devel-4.4.36-1.oe2403
+[  757s] [125/292] installing newt-0.52.23-1.oe2403
+[  763s] [126/292] installing perl-Text-ParseWords-3.30-420.oe2403
+[  770s] [127/292] installing bc-1.07.1-12.oe2403
+[  777s] [128/292] installing libmount-2.39.1-4.oe2403
+[  781s] [129/292] installing perl-Digest-1.20-3.oe2403
+[  786s] [130/292] installing unzip-6.0-51.oe2403
+[  793s] [131/292] installing cracklib-2.9.11-1.oe2403
+[  795s] [132/292] installing e2fsprogs-1.47.0-2.oe2403
+[  799s] [133/292] installing elfutils-libelf-0.190-2.oe2403
+[  804s] [134/292] installing findutils-2:4.9.0-1.oe2403
+[  809s] [135/292] installing libsemanage-3.5-1.oe2403
+[  813s] [136/292] installing sqlite-3.42.0-1.oe2403
+[  821s] [137/292] installing xz-5.4.4-1.oe2403
+[  827s] [138/292] installing libpsl-0.21.2-1.oe2403
+[  835s] [139/292] installing logrotate-3.21.0-1.oe2403
+[  839s] [140/292] installing make-1:4.4.1-1.oe2403
+[  844s] [141/292] installing perl-Scalar-List-Utils-4:1.63-1.oe2403
+[  849s] [142/292] installing perl-Time-HiRes-4:1.9775-1.oe2403
+[  857s] [143/292] installing cpp-12.3.1-18.oe2403
+[  867s] [144/292] installing libbpf-2:1.2.2-1.oe2403
+[  872s] [145/292] installing dwz-0.15-1.oe2403
+[  883s] [146/292] installing openEuler-release-24.03LTS-54.oe2403
+[  894s] [147/292] installing perl-Digest-MD5-2.58-2.oe2403
+[  900s] [148/292] installing chkconfig-1.25-1.oe2403
+[  905s] [149/292] installing elfutils-libs-0.190-2.oe2403
+[  913s] [150/292] installing glib2-2.78.3-1.oe2403
+[  924s] [151/292] installing setup-2.14.5-1.oe2403
+[  926s] [152/292] installing binutils-2.41-4.oe2403
+[  930s] [153/292] installing elfutils-0.190-2.oe2403
+[  935s] [154/292] installing p11-kit-trust-0.25.0-2.oe2403
+[  937s] [155/292] installing babeltrace-1.5.11-1.oe2403
+[  945s] [156/292] installing iproute-1:6.6.0-2.oe2403
+[  949s] [157/292] installing basesystem-12-3.oe2403
+[  952s] [158/292] installing ca-certificates-2023.2.64-1.oe2403
+[  963s] [159/292] installing gcc-12.3.1-18.oe2403
+[  976s] [160/292] installing python-pip-wheel-23.3.1-1.oe2403
+[  983s] [161/292] installing gcc-c++-12.3.1-18.oe2403
+[  994s] [162/292] installing python3-3.11.6-2.oe2403
+[ 1007s] [163/292] installing crypto-policies-20230614-1.git5f3458e.oe2403
+[ 1014s] [164/292] installing gdb-headless-14.1-1.oe2403
+[ 1020s] [165/292] installing gdb-14.1-1.oe2403
+[ 1030s] [166/292] installing compat-openssl11-libs-1:1.1.1m-9.oe2403
+[ 1032s] [167/292] installing openssl-libs-1:3.0.12-3.oe2403
+[ 1036s] [168/292] installing nss-3.94.0-4.oe2403
+[ 1039s] [169/292] installing libevent-2.1.12-9.oe2403
+[ 1043s] [170/292] installing openldap-2.6.5-4.oe2403
+[ 1046s] [171/292] installing fipscheck-1.5.0-10.oe2403
+[ 1049s] [172/292] installing kmod-libs-30-2.oe2403
+[ 1054s] [173/292] installing nss-util-3.94.0-4.oe2403
+[ 1060s] [174/292] installing openssl-1:3.0.12-3.oe2403
+[ 1066s] [175/292] installing libarchive-3.7.1-1.oe2403
+[ 1069s] [176/292] installing debugedit-5.0-6.oe2403
+[ 1077s] [177/292] installing libverto-0.3.2-3.oe2403
+[ 1081s] [178/292] installing nss-softokn-3.94.0-4.oe2403
+[ 1090s] [179/292] installing pciutils-3.10.0-2.oe2403
+[ 1099s] [180/292] installing krb5-libs-1.21.2-1.oe2403
+[ 1113s] [181/292] installing libtirpc-1.3.4-1.oe2403
+[ 1121s] [182/292] installing libssh-0.10.5-2.oe2403
+[ 1125s] [183/292] installing libnsl2-2.0.1-1.oe2403
+[ 1129s] [184/292] installing libcurl-8.4.0-1.oe2403
+[ 1134s] [185/292] installing curl-8.4.0-1.oe2403
+[ 1140s] [186/292] installing tpm2-tss-4.0.1-1.oe2403
+[ 1143s] [187/292] installing pam-1.5.3-2.oe2403
+[ 1158s] [188/292] installing ima-evm-utils-libs-1.5-1.oe2403
+[ 1164s] [189/292] installing libpwquality-1.4.5-1.oe2403
+[ 1177s] [190/292] installing libcap-2.69-3.oe2403
+[ 1181s] [191/292] installing shadow-subid-devel-2:4.14.3-1.oe2403
+[ 1184s] [192/292] installing iputils-20221126-2.oe2403
+[ 1188s] [193/292] installing systemd-libs-255-7.oe2403
+[ 1196s] Detected system with incompatible nobody defined, creating /etc/systemd/dont-synthesize-nobody
+[ 1196s] [194/292] installing shadow-2:4.14.3-1.oe2403
+[ 1198s] [195/292] installing rpm-4.18.2-5.oe2403
+[ 1203s] [196/292] installing efi-srpm-macros-4-9.oe2403
+[ 1208s] [197/292] installing cmake-rpm-macros-3.27.9-2.oe2403
+[ 1211s] [198/292] installing dbus-libs-1:1.14.8-2.oe2403
+[ 1217s] [199/292] installing libutempter-1.2.1-3.oe2403
+[ 1224s] [200/292] installing rpm-libs-4.18.2-5.oe2403
+[ 1227s] [201/292] installing systemd-255-7.oe2403
+[ 1244s] [202/292] installing digest-list-tools-0.3.95-14.oe2403
+[ 1248s] [203/292] installing rdma-core-50.0-5.oe2403
+[ 1253s] [204/292] installing openEuler-rpm-config-30-52.oe2403
+[ 1259s] [205/292] installing cmake-3.27.9-2.oe2403
+[ 1268s] [206/292] installing dhcp-12:4.4.3-7.oe2403
+[ 1276s] [207/292] installing util-linux-2.39.1-4.oe2403
+[ 1283s] [208/292] installing cmake-data-3.27.9-2.oe2403
+[ 1289s] [209/292] installing device-mapper-8:1.02.195-7.oe2403
+[ 1293s] [210/292] installing policycoreutils-3.5-2.oe2403
+[ 1297s] Created symlink /etc/systemd/system/multi-user.target.wants/restorecond.service -> /usr/lib/systemd/system/restorecond.service.
+[ 1297s] [211/292] installing rpm-build-4.18.2-5.oe2403
+[ 1300s] [212/292] installing perl-4:5.38.0-6.oe2403
+[ 1305s] [213/292] installing perl-B-Debug-1.26-6.oe2403
+[ 1312s] [214/292] installing perl-Env-1.04-398.oe2403
+[ 1316s] [215/292] installing perl-Text-Tabs+Wrap-2023.0511-1.oe2403
+[ 1317s] [216/292] installing perl-Devel-PPPort-3.71-1.oe2403
+[ 1322s] [217/292] installing perl-Algorithm-Diff-1:1.201-2.oe2403
+[ 1326s] [218/292] installing perl-Params-Check-1:0.38-420.oe2403
+[ 1330s] [219/292] installing perl-Term-Cap-1.18-1.oe2403
+[ 1334s] [220/292] installing perl-Text-Balanced-2.06-1.oe2403
+[ 1337s] [221/292] installing perl-threads-2:2.36-1.oe2403
+[ 1341s] [222/292] installing perl-CPAN-Meta-YAML-0.018-421.oe2403
+[ 1346s] [223/292] installing perl-Config-Perl-V-0.36-1.oe2403
+[ 1350s] [224/292] installing perl-Filter-2:1.64-1.oe2403
+[ 1353s] [225/292] installing perl-IPC-SysV-2.09-2.oe2403
+[ 1361s] [226/292] installing perl-Locale-Maketext-1:1.33-1.oe2403
+[ 1367s] [227/292] installing perl-constant-1.33-422.oe2403
+[ 1368s] [228/292] installing pesign-obs-integration-10.1-4.oe2403
+[ 1375s] [229/292] installing infiniband-diags-50.0-5.oe2403
+[ 1381s] [230/292] installing selinux-policy-40.7-1.oe2403
+[ 1414s] [231/292] installing perl-Socket-4:2.037-1.oe2403
+[ 1421s] [232/292] installing perl-Storable-1:3.25-3.oe2403
+[ 1434s] [233/292] installing perl-Unicode-Normalize-1.32-1.oe2403
+[ 1447s] [234/292] installing gcc_secure-1.0-0.12.oe2403
+[ 1456s] [235/292] installing cryptsetup-2.6.1-1.oe2403
+[ 1463s] [236/292] installing selinux-policy-targeted-40.7-1.oe2403
+[ 1478s] [237/292] installing perl-Filter-Simple-1:0.94-1.oe2403
+[ 1482s] [238/292] installing perl-IO-Socket-IP-0.42-1.oe2403
+[ 1486s] [239/292] installing perl-Text-Diff-1.45-8.oe2403
+[ 1490s] [240/292] installing perl-Time-Local-2:1.350-1.oe2403
+[ 1503s] [241/292] installing perl-version-8:0.99.30-1.oe2403
+[ 1508s] [242/292] installing perl-IPC-System-Simple-1.30-3.oe2403
+[ 1513s] [243/292] installing perl-threads-shared-1.62-2.oe2403
+[ 1516s] [244/292] installing perl-Compress-Raw-Bzip2-2.206-1.oe2403
+[ 1521s] [245/292] installing perl-Compress-Raw-Zlib-1:2.206-1.oe2403
+[ 1524s] [246/292] installing perl-Locale-Codes-3.77-1.oe2403
+[ 1530s] [247/292] installing perl-PathTools-3.89-1.oe2403
+[ 1535s] [248/292] installing perl-Sys-Syslog-0.36-2.oe2403
+[ 1541s] [249/292] installing rdma-core-devel-50.0-5.oe2403
+[ 1547s] [250/292] installing perl-Math-BigInt-1:2.0030.02-1.oe2403
+[ 1555s] [251/292] installing perl-Data-Dumper-2.183-2.oe2403
+[ 1558s] [252/292] installing perl-Encode-4:3.20-1.oe2403
+[ 1562s] [253/292] installing perl-Module-Load-1:0.36-2.oe2403
+[ 1567s] [254/292] installing perl-Thread-Queue-3.13-4.oe2403
+[ 1575s] [255/292] installing perl-experimental-0.031-2.oe2403
+[ 1582s] [256/292] installing perl-File-Path-2.18-2.oe2403
+[ 1588s] [257/292] installing perl-Module-Metadata-1.000038-1.oe2403
+[ 1596s] [258/292] installing perl-CPAN-Meta-Requirements-2.143-2.oe2403
+[ 1599s] [259/292] installing perl-Encode-devel-4:3.20-1.oe2403
+[ 1606s] [260/292] installing perl-HTTP-Tiny-0.088-1.oe2403
+[ 1612s] [261/292] installing perl-Math-BigInt-FastCalc-0.5018-1.oe2403
+[ 1622s] [262/292] installing perl-bignum-0.66-1.oe2403
+[ 1625s] [263/292] installing perl-Unicode-Collate-1.31-2.oe2403
+[ 1634s] [264/292] installing perl-autodie-2.36-1.oe2403
+[ 1640s] [265/292] installing perl-libnet-3.15-1.oe2403
+[ 1648s] [266/292] installing perl-podlators-1:5.01-2.oe2403
+[ 1659s] [267/292] installing perl-ExtUtils-Command-1:7.70-2.oe2403
+[ 1661s] [268/292] installing perl-ExtUtils-Manifest-1:1.75-1.oe2403
+[ 1667s] [269/292] installing perl-File-Temp-1:0.2311-3.oe2403
+[ 1669s] [270/292] installing perl-Pod-Perldoc-1:3.28-5.oe2403
+[ 1673s] [271/292] installing perl-Test-Simple-2:1.302198-1.oe2403
+[ 1678s] [272/292] installing perl-Pod-Usage-4:2.03-2.oe2403
+[ 1684s] [273/292] installing perl-Getopt-Long-1:2.57-1.oe2403
+[ 1687s] [274/292] installing perl-ExtUtils-ParseXS-2:3.51-1.oe2403
+[ 1694s] [275/292] installing perl-Module-CoreList-1:5.20231230-1.oe2403
+[ 1698s] [276/292] installing perl-Pod-Parser-1.66-1.oe2403
+[ 1704s] [277/292] installing perl-Digest-SHA-1:6.04-1.oe2403
+[ 1711s] [278/292] installing perl-Pod-Simple-1:3.45-1.oe2403
+[ 1716s] [279/292] installing perl-Test-Harness-2:3.48-1.oe2403
+[ 1719s] [280/292] installing perl-IO-Compress-2.206-1.oe2403
+[ 1723s] [281/292] installing perl-JSON-PP-1:4.16-1.oe2403
+[ 1729s] [282/292] installing autoconf-2.71-4.oe2403
+[ 1733s] [283/292] installing perl-Pod-Checker-4:1.75-1.oe2403
+[ 1738s] [284/292] installing perl-CPAN-Meta-2.150010-420.oe2403
+[ 1743s] [285/292] installing perl-Module-Load-Conditional-0.74-2.oe2403
+[ 1748s] [286/292] installing perl-Archive-Tar-3.02-1.oe2403
+[ 1751s] [287/292] installing automake-1.16.5-4.oe2403
+[ 1754s] [288/292] installing perl-ExtUtils-MakeMaker-1:7.70-2.oe2403
+[ 1763s] [289/292] installing libtool-2.4.7-3.oe2403
+[ 1771s] [290/292] installing perl-ExtUtils-Install-2.22-1.oe2403
+[ 1780s] [291/292] installing perl-IPC-Cmd-2:1.04-4.oe2403
+[ 1781s] [292/292] installing perl-File-Fetch-1.04-1.oe2403
+[ 1786s] now finalizing build dir...
+[ 1787s] Error: ipv4: Address already assigned.
+[ 1787s] Error: ipv6: address already assigned.
+[ 1787s] Cannot find device "eth0"
+[ 1787s] 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+[ 1787s]     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+[ 1787s]     inet 127.0.0.1/8 scope host lo
+[ 1787s]        valid_lft forever preferred_lft forever
+[ 1787s]     inet6 ::1/128 scope host noprefixroute 
+[ 1787s]        valid_lft forever preferred_lft forever
+[ 1787s] 2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+[ 1787s]     link/ether 00:50:56:94:03:cd brd ff:ff:ff:ff:ff:ff
+[ 1787s]     altname enp2s1
+[ 1787s]     inet 10.240.115.130/20 brd 10.240.127.255 scope global noprefixroute ens33
+[ 1787s]        valid_lft forever preferred_lft forever
+[ 1787s]     inet6 fe80::250:56ff:fe94:3cd/64 scope link noprefixroute 
+[ 1787s]        valid_lft forever preferred_lft forever
+[ 1787s] 3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+[ 1787s]     link/ether 02:42:a0:86:df:22 brd ff:ff:ff:ff:ff:ff
+[ 1787s]     inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+[ 1787s]        valid_lft forever preferred_lft forever
+[ 1787s] default via 10.240.112.1 dev ens33 proto static metric 100 
+[ 1787s] 10.240.112.0/20 dev ens33 proto kernel scope link src 10.240.115.130 metric 100 
+[ 1787s] 172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+[ 1787s] PING 223.5.5.5 (223.5.5.5) 56(84) bytes of data.
+[ 1787s] 64 bytes from 223.5.5.5: icmp_seq=1 ttl=117 time=3.95 ms
+[ 1787s] 
+[ 1787s] --- 223.5.5.5 ping statistics ---
+[ 1787s] 1 packets transmitted, 1 received, 0% packet loss, time 0ms
+[ 1787s] rtt min/avg/max/mdev = 3.953/3.953/3.953/0.000 ms
+[ 1789s] Running build time source services...
+[ 1794s] -----------------------------------------------------------------
+[ 1794s] ----- building libvma.spec (user abuild)
+[ 1794s] -----------------------------------------------------------------
+[ 1794s] -----------------------------------------------------------------
+[ 1796s] + exec rpmbuild -ba --define '_srcdefattr (-,root,root)' --nosignature --define 'disturl obs://oerv-obs-backend/openEuler:24.03/mainline_riscv64/32da90e402f7a135c6ae5e83c88bb43b-libvma' /home/abuild/rpmbuild/SOURCES/libvma.spec
+[ 1796s] setting SOURCE_DATE_EPOCH=1689379200
+[ 1796s] Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.x4ljHl
+[ 1796s] + umask 022
+[ 1796s] + cd /home/abuild/rpmbuild/BUILD
+[ 1796s] + cd /home/abuild/rpmbuild/BUILD
+[ 1796s] + rm -rf libvma-9.8.1
+[ 1796s] + /usr/lib/rpm/rpmuncompress -x /home/abuild/rpmbuild/SOURCES/9.8.1.tar.gz
+[ 1796s] + STATUS=0
+[ 1796s] + '[' 0 -ne 0 ']'
+[ 1796s] + cd libvma-9.8.1
+[ 1796s] + /usr/bin/chmod -Rf a+rX,u+w,g-w,o-w .
+[ 1797s] + /usr/lib/rpm/rpmuncompress /home/abuild/rpmbuild/SOURCES/add-loongarch64-support-for-libvma.patch
+[ 1797s] + /usr/bin/patch -p1 -s --fuzz=0 --no-backup-if-mismatch -f
+[ 1797s] + RPM_EC=0
+[ 1797s] ++ jobs -p
+[ 1797s] + exit 0
+[ 1797s] Executing(%build): /bin/sh -e /var/tmp/rpm-tmp.6nyNCx
+[ 1797s] + umask 022
+[ 1797s] + cd /home/abuild/rpmbuild/BUILD
+[ 1797s] + cd libvma-9.8.1
+[ 1797s] + ./autogen.sh
+[ 1798s] autoreconf: export WARNINGS=
+[ 1798s] autoreconf: Entering directory '.'
+[ 1798s] autoreconf: configure.ac: not using Gettext
+[ 1799s] autoreconf: running: aclocal 
+[ 1808s] autoreconf: configure.ac: tracing
+[ 1815s] autoreconf: configure.ac: creating directory config/aux
+[ 1815s] autoreconf: running: libtoolize --copy
+[ 1816s] libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'config/aux'.
+[ 1816s] libtoolize: copying file 'config/aux/ltmain.sh'
+[ 1817s] libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'config/m4'.
+[ 1817s] libtoolize: copying file 'config/m4/libtool.m4'
+[ 1817s] libtoolize: copying file 'config/m4/ltoptions.m4'
+[ 1818s] libtoolize: copying file 'config/m4/ltsugar.m4'
+[ 1818s] libtoolize: copying file 'config/m4/ltversion.m4'
+[ 1819s] libtoolize: copying file 'config/m4/lt~obsolete.m4'
+[ 1819s] libtoolize: Consider adding '-I config/m4' to ACLOCAL_AMFLAGS in Makefile.am.
+[ 1819s] autoreconf: configure.ac: not using Intltool
+[ 1819s] autoreconf: configure.ac: not using Gtkdoc
+[ 1819s] autoreconf: running: aclocal 
+[ 1828s] autoreconf: running: /usr/bin/autoconf
+[ 1832s] configure.ac:29: warning: The macro `AC_CONFIG_HEADER' is obsolete.
+[ 1832s] configure.ac:29: You should run autoupdate.
+[ 1832s] ./lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
+[ 1832s] configure.ac:29: the top level
+[ 1832s] configure.ac:114: warning: AC_PROG_LEX without either yywrap or noyywrap is obsolete
+[ 1832s] ./lib/autoconf/programs.m4:716: _AC_PROG_LEX is expanded from...
+[ 1832s] ./lib/autoconf/programs.m4:709: AC_PROG_LEX is expanded from...
+[ 1832s] aclocal.m4:1012: AM_PROG_LEX is expanded from...
+[ 1832s] configure.ac:114: the top level
+[ 1832s] configure.ac:150: warning: The macro `AC_HELP_STRING' is obsolete.
+[ 1832s] configure.ac:150: You should run autoupdate.
+[ 1832s] ./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+[ 1832s] config/m4/compiler.m4:131: COMPILER_CAPABILITY_SETUP is expanded from...
+[ 1832s] configure.ac:150: the top level
+[ 1832s] configure.ac:150: warning: The macro `AC_TRY_COMPILE' is obsolete.
+[ 1832s] configure.ac:150: You should run autoupdate.
+[ 1832s] ./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+[ 1832s] lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+[ 1832s] lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+[ 1832s] ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+[ 1832s] config/m4/compiler.m4:13: CHECK_COMPILER_ATTRIBUTE is expanded from...
+[ 1832s] config/m4/compiler.m4:131: COMPILER_CAPABILITY_SETUP is expanded from...
+[ 1832s] configure.ac:150: the top level
+[ 1832s] configure.ac:150: warning: The macro `AC_TRY_COMPILE' is obsolete.
+[ 1832s] configure.ac:150: You should run autoupdate.
+[ 1832s] ./lib/autoconf/general.m4:2847: AC_TRY_COMPILE is expanded from...
+[ 1832s] lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+[ 1832s] lib/m4sugar/m4sh.m4:692: _AS_IF_ELSE is expanded from...
+[ 1832s] lib/m4sugar/m4sh.m4:699: AS_IF is expanded from...
+[ 1832s] ./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+[ 1832s] config/m4/compiler.m4:13: CHECK_COMPILER_ATTRIBUTE is expanded from...
+[ 1832s] config/m4/compiler.m4:131: COMPILER_CAPABILITY_SETUP is expanded from...
+[ 1832s] configure.ac:150: the top level
+[ 1832s] configure.ac:290: warning: The macro `AC_HEADER_STDC' is obsolete.
+[ 1832s] configure.ac:290: You should run autoupdate.
+[ 1832s] ./lib/autoconf/headers.m4:704: AC_HEADER_STDC is expanded from...
+[ 1832s] configure.ac:290: the top level
+[ 1835s] autoreconf: running: /usr/bin/autoheader
+[ 1840s] autoreconf: running: automake --add-missing --copy --no-force
+[ 1846s] configure.ac:110: installing 'config/aux/compile'
+[ 1846s] configure.ac:110: installing 'config/aux/config.guess'
+[ 1846s] configure.ac:110: installing 'config/aux/config.sub'
+[ 1846s] configure.ac:78: installing 'config/aux/install-sh'
+[ 1846s] configure.ac:78: installing 'config/aux/missing'
+[ 1847s] src/state_machine/Makefile.am: installing 'config/aux/depcomp'
+[ 1850s] autoreconf: Leaving directory '.'
+[ 1851s] + CFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection'
+[ 1851s] + export CFLAGS
+[ 1851s] + CXXFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions'
+[ 1851s] + export CXXFLAGS
+[ 1851s] + FFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -I/usr/lib64/gfortran/modules'
+[ 1851s] + export FFLAGS
+[ 1851s] + FCFLAGS='-O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -I/usr/lib64/gfortran/modules'
+[ 1851s] + export FCFLAGS
+[ 1851s] + LDFLAGS='-Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld'
+[ 1851s] + export LDFLAGS
+[ 1851s] + '[' 1 = 1 ']'
+[ 1851s] +++ dirname ./configure
+[ 1851s] ++ find . -name config.guess -o -name config.sub
+[ 1851s] + for i in $(find $(dirname ./configure) -name config.guess -o -name config.sub)
+[ 1851s] ++ basename ./config/aux/config.guess
+[ 1851s] + '[' -f /usr/lib/rpm/openEuler/config.guess ']'
+[ 1851s] + /usr/bin/rm -f ./config/aux/config.guess
+[ 1851s] ++ basename ./config/aux/config.guess
+[ 1851s] + /usr/bin/cp -fv /usr/lib/rpm/openEuler/config.guess ./config/aux/config.guess
+[ 1851s] '/usr/lib/rpm/openEuler/config.guess' -> './config/aux/config.guess'
+[ 1851s] + for i in $(find $(dirname ./configure) -name config.guess -o -name config.sub)
+[ 1851s] ++ basename ./config/aux/config.sub
+[ 1851s] + '[' -f /usr/lib/rpm/openEuler/config.sub ']'
+[ 1851s] + /usr/bin/rm -f ./config/aux/config.sub
+[ 1851s] ++ basename ./config/aux/config.sub
+[ 1851s] + /usr/bin/cp -fv /usr/lib/rpm/openEuler/config.sub ./config/aux/config.sub
+[ 1851s] '/usr/lib/rpm/openEuler/config.sub' -> './config/aux/config.sub'
+[ 1851s] + '[' 1 = 1 ']'
+[ 1851s] + '[' x '!=' 'x-Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld' ']'
+[ 1851s] ++ find . -name ltmain.sh
+[ 1851s] + for i in $(find . -name ltmain.sh)
+[ 1851s] + /usr/bin/sed -i.backup -e 's~compiler_flags=$~compiler_flags="-Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld"~' ./config/aux/ltmain.sh
+[ 1851s] + ./configure --build=riscv64-openEuler-linux-gnu --host=riscv64-openEuler-linux-gnu --program-prefix= --disable-dependency-tracking --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --sysconfdir=/etc --datadir=/usr/share --includedir=/usr/include --libdir=/usr/lib64 --libexecdir=/usr/libexec --localstatedir=/var --sharedstatedir=/var/lib --mandir=/usr/share/man --infodir=/usr/share/info
+[ 1853s] checking for a BSD-compatible install... /usr/bin/install -c
+[ 1853s] checking whether build environment is sane... yes
+[ 1853s] checking for a race-free mkdir -p... /usr/bin/mkdir -p
+[ 1853s] checking for gawk... gawk
+[ 1854s] checking whether make sets $(MAKE)... yes
+[ 1854s] checking whether make supports nested variables... yes
+[ 1854s] checking whether make supports nested variables... (cached) yes
+[ 1854s] 
+[ 1854s] ============================================================================
+[ 1854s] == Configure build tools
+[ 1854s] ============================================================================
+[ 1855s] checking build system type... riscv64-openEuler-linux-gnu
+[ 1855s] checking host system type... riscv64-openEuler-linux-gnu
+[ 1855s] checking how to print strings... printf
+[ 1855s] checking whether make supports the include directive... yes (GNU style)
+[ 1855s] checking for riscv64-openEuler-linux-gnu-gcc... no
+[ 1855s] checking for gcc... gcc
+[ 1858s] checking whether the C compiler works... yes
+[ 1858s] checking for C compiler default output file name... a.out
+[ 1859s] checking for suffix of executables... 
+[ 1861s] checking whether we are cross compiling... no
+[ 1862s] checking for suffix of object files... o
+[ 1862s] checking whether the compiler supports GNU C... yes
+[ 1863s] checking whether gcc accepts -g... yes
+[ 1865s] checking for gcc option to enable C11 features... none needed
+[ 1867s] checking whether gcc understands -c and -o together... yes
+[ 1867s] checking dependency style of gcc... none
+[ 1867s] checking for a sed that does not truncate output... /usr/bin/sed
+[ 1867s] checking for grep that handles long lines and -e... /usr/bin/grep
+[ 1867s] checking for egrep... /usr/bin/grep -E
+[ 1867s] checking for fgrep... /usr/bin/grep -F
+[ 1868s] checking for ld used by gcc... /usr/bin/ld
+[ 1868s] checking if the linker (/usr/bin/ld) is GNU ld... yes
+[ 1868s] checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+[ 1868s] checking the name lister (/usr/bin/nm -B) interface... BSD nm
+[ 1868s] checking whether ln -s works... yes
+[ 1869s] checking the maximum length of command line arguments... 1572864
+[ 1869s] checking how to convert riscv64-openEuler-linux-gnu file names to riscv64-openEuler-linux-gnu format... func_convert_file_noop
+[ 1869s] checking how to convert riscv64-openEuler-linux-gnu file names to toolchain format... func_convert_file_noop
+[ 1869s] checking for /usr/bin/ld option to reload object files... -r
+[ 1869s] checking for riscv64-openEuler-linux-gnu-file... no
+[ 1869s] checking for file... file
+[ 1869s] checking for riscv64-openEuler-linux-gnu-objdump... no
+[ 1869s] checking for objdump... objdump
+[ 1869s] checking how to recognize dependent libraries... pass_all
+[ 1869s] checking for riscv64-openEuler-linux-gnu-dlltool... no
+[ 1869s] checking for dlltool... no
+[ 1869s] checking how to associate runtime and link libraries... printf %s\n
+[ 1869s] checking for riscv64-openEuler-linux-gnu-ar... no
+[ 1869s] checking for ar... ar
+[ 1870s] checking for archiver @FILE support... @
+[ 1870s] checking for riscv64-openEuler-linux-gnu-strip... no
+[ 1870s] checking for strip... strip
+[ 1870s] checking for riscv64-openEuler-linux-gnu-ranlib... no
+[ 1870s] checking for ranlib... ranlib
+[ 1872s] checking command to parse /usr/bin/nm -B output from gcc object... ok
+[ 1872s] checking for sysroot... no
+[ 1872s] checking for a working dd... /usr/bin/dd
+[ 1872s] checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+[ 1872s] checking for riscv64-openEuler-linux-gnu-mt... no
+[ 1872s] checking for mt... no
+[ 1873s] checking if : is a manifest tool... no
+[ 1873s] checking for stdio.h... yes
+[ 1875s] checking for stdlib.h... yes
+[ 1875s] checking for string.h... yes
+[ 1876s] checking for inttypes.h... yes
+[ 1877s] checking for stdint.h... yes
+[ 1878s] checking for strings.h... yes
+[ 1879s] checking for sys/stat.h... yes
+[ 1880s] checking for sys/types.h... yes
+[ 1880s] checking for unistd.h... yes
+[ 1881s] checking for dlfcn.h... yes
+[ 1881s] checking for objdir... .libs
+[ 1884s] checking if gcc supports -fno-rtti -fno-exceptions... no
+[ 1884s] checking for gcc option to produce PIC... -fPIC -DPIC
+[ 1885s] checking if gcc PIC flag -fPIC -DPIC works... yes
+[ 1886s] checking if gcc static flag -static works... yes
+[ 1887s] checking if gcc supports -c -o file.o... yes
+[ 1887s] checking if gcc supports -c -o file.o... (cached) yes
+[ 1887s] checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+[ 1888s] checking whether -lc should be explicitly linked in... no
+[ 1890s] checking dynamic linker characteristics... GNU/Linux ld.so
+[ 1890s] checking how to hardcode library paths into programs... immediate
+[ 1890s] checking whether stripping libraries is possible... yes
+[ 1890s] checking if libtool supports shared libraries... yes
+[ 1890s] checking whether to build shared libraries... yes
+[ 1890s] checking whether to build static libraries... no
+[ 1890s] checking for riscv64-openEuler-linux-gnu-gcc... gcc
+[ 1893s] checking whether the compiler supports GNU C... (cached) yes
+[ 1893s] checking whether gcc accepts -g... (cached) yes
+[ 1893s] checking for gcc option to enable C11 features... (cached) none needed
+[ 1893s] checking whether gcc understands -c and -o together... (cached) yes
+[ 1893s] checking dependency style of gcc... (cached) none
+[ 1893s] checking for riscv64-openEuler-linux-gnu-g++... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-c++... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-gpp... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-aCC... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-CC... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-cxx... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-cc++... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-cl.exe... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-FCC... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-KCC... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-RCC... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-xlC_r... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-xlC... no
+[ 1893s] checking for riscv64-openEuler-linux-gnu-clang++... no
+[ 1893s] checking for g++... g++
+[ 1895s] checking whether the compiler supports GNU C++... yes
+[ 1897s] checking whether g++ accepts -g... yes
+[ 1899s] checking for g++ option to enable C++11 features... none needed
+[ 1899s] checking dependency style of g++... none
+[ 1901s] checking how to run the C++ preprocessor... g++ -E
+[ 1905s] checking for ld used by g++... /usr/bin/ld
+[ 1905s] checking if the linker (/usr/bin/ld) is GNU ld... yes
+[ 1905s] checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+[ 1907s] checking for g++ option to produce PIC... -fPIC -DPIC
+[ 1908s] checking if g++ PIC flag -fPIC -DPIC works... yes
+[ 1909s] checking if g++ static flag -static works... no
+[ 1910s] checking if g++ supports -c -o file.o... yes
+[ 1910s] checking if g++ supports -c -o file.o... (cached) yes
+[ 1910s] checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+[ 1910s] checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+[ 1910s] checking how to hardcode library paths into programs... immediate
+[ 1910s] checking for bison... no
+[ 1910s] checking for byacc... no
+[ 1910s] checking for flex... no
+[ 1910s] checking for lex... no
+[ 1910s] checking for pkg-config... yes
+[ 1910s] checking for riscv64-openEuler-linux-gnu-pkg-config... /usr/bin/riscv64-openEuler-linux-gnu-pkg-config
+[ 1910s] checking pkg-config is at least version 0.9.0... yes
+[ 1910s] 
+[ 1910s] ============================================================================
+[ 1910s] == Setting compiler specific options
+[ 1910s] ============================================================================
+[ 1910s] checking for compiler... gcc
+[ 1910s] checking for debug support... no
+[ 1912s] checking for attribute visibility... yes
+[ 1912s] checking for symbols visibility... no
+[ 1916s] checking for compiler c++ 11... yes
+[ 1916s] 
+[ 1916s] ============================================================================
+[ 1916s] == Configure project
+[ 1916s] ============================================================================
+[ 1916s] checking for time measurement support... no
+[ 1916s] checking for valgrind support... no
+[ 1916s] checking for OFED path... /usr
+[ 1917s] checking for gcc options needed to detect all undeclared functions... none needed
+[ 1918s] checking for infiniband/verbs.h... yes
+[ 1919s] checking for rdma/rdma_cma.h... yes
+[ 1921s] checking for ibv_get_device_list in -libverbs... yes
+[ 1922s] checking for rdma_create_id in -lrdmacm... yes
+[ 1923s] checking for infiniband/verbs.h... (cached) yes
+[ 1924s] checking for struct ibv_query_device_ex_input.comp_mask... yes
+[ 1924s] checking for OFED Verbs version... Upstream
+[ 1925s] checking for infiniband/mlx5dv.h... yes
+[ 1926s] checking for mlx5dv_init_obj in -lmlx5... yes
+[ 1926s] checking for direct verbs support... yes
+[ 1927s] checking for attribute IBV_CQ_ATTR_MODERATE... yes
+[ 1929s] checking for attribute IBV_QPT_RAW_PACKET... yes
+[ 1930s] checking for attribute IBV_WC_WITH_VLAN... no
+[ 1931s] checking for attribute IBV_ACCESS_ALLOCATE_MR... no
+[ 1932s] checking for attribute IBV_QP_CREATE_SOURCE_QPN... yes
+[ 1933s] checking for attribute IBV_FLOW_SPEC_IB... no
+[ 1935s] checking for attribute IBV_DEVICE_RAW_IP_CSUM... yes
+[ 1936s] checking for attribute IBV_SEND_IP_CSUM... yes
+[ 1938s] checking for attribute IBV_FLOW_SPEC_ACTION_TAG... yes
+[ 1939s] checking for attribute IBV_WC_EX_WITH_COMPLETION_TIMESTAMP... yes
+[ 1942s] checking for struct ibv_device_attr_ex.orig_attr... yes
+[ 1943s] checking for struct ibv_alloc_dm_attr.length... yes
+[ 1944s] checking for struct ibv_packet_pacing_caps.qp_rate_limit_min... yes
+[ 1945s] checking for struct ibv_qp_rate_limit_attr.max_burst_sz... yes
+[ 1947s] checking for attribute IBV_WR_TSO... yes
+[ 1948s] checking for attribute MLX5_OPCODE_NOP... yes
+[ 1949s] checking for struct mlx5dv_clock_info.last_cycles... yes
+[ 1951s] checking for struct mlx5dv_context.num_lag_ports... yes
+[ 1951s] checking for logging optimization... medium
+[ 1951s] checking for dpcp support... no
+[ 1951s] checking for thread locking support... yes
+[ 1951s] checking for tcp tx window availability support... no
+[ 1951s] checking for tso support... no
+[ 1951s] checking for md5 version of VMA statistics is... cebac2c54a667a74ebba9fad44cc8803
+[ 1951s] 
+[ 1951s] ============================================================================
+[ 1951s] == Check for header files
+[ 1951s] ============================================================================
+[ 1951s] checking for egrep... (cached) /usr/bin/grep -E
+[ 1952s] checking for sys/prctl.h... yes
+[ 1953s] checking for sys/inotify.h... yes
+[ 1954s] checking for sys/fanotify.h... yes
+[ 1955s] checking for sys/capability.h... no
+[ 1956s] checking for linux/ethtool.h... yes
+[ 1957s] checking for linux/tls.h... yes
+[ 1957s] 
+[ 1957s] ============================================================================
+[ 1957s] == Check for libraries
+[ 1957s] ============================================================================
+[ 1958s] checking for atoi in -lstdc++... yes
+[ 1960s] checking for dlsym in -ldl... yes
+[ 1961s] checking for clock_gettime in -lrt... yes
+[ 1962s] checking for pthread_create in -lpthread... yes
+[ 1962s] checking for libnl-route-3.0... yes
+[ 1963s] checking for libnl-1... no
+[ 1963s] 
+[ 1963s] ============================================================================
+[ 1963s] == Check for functions, types and structures
+[ 1963s] ============================================================================
+[ 1964s] checking for __read_chk... yes
+[ 1966s] checking for __recv_chk... yes
+[ 1968s] checking for __recvfrom_chk... yes
+[ 1969s] checking for __poll_chk... yes
+[ 1970s] checking for __ppoll_chk... yes
+[ 1972s] checking for SOF_TIMESTAMPING_SOFTWARE support... yes
+[ 1973s] checking for FRA_OIFNAME enum value support... yes
+[ 1975s] checking for struct mmsghdr... yes
+[ 1977s] checking for 'struct timespec' for recvmmsg() const... no
+[ 1977s] 
+[ 1977s] ============================================================================
+[ 1977s] == Configure makefiles
+[ 1977s] ============================================================================
+[ 1977s] checking that generated files are newer than configure... done
+[ 1977s] configure: creating ./config.status
+[ 1989s] config.status: creating Makefile
+[ 1989s] config.status: creating src/Makefile
+[ 1989s] config.status: creating src/vma/Makefile
+[ 1990s] config.status: creating src/vma/infra/Makefile
+[ 1990s] config.status: creating src/vma/netlink/Makefile
+[ 1991s] config.status: creating src/utils/Makefile
+[ 1991s] config.status: creating src/vlogger/Makefile
+[ 1991s] config.status: creating src/stats/Makefile
+[ 1992s] config.status: creating src/state_machine/Makefile
+[ 1992s] config.status: creating tests/Makefile
+[ 1992s] config.status: creating tests/timetest/Makefile
+[ 1993s] config.status: creating tests/gtest/Makefile
+[ 1993s] config.status: creating tests/pps_test/Makefile
+[ 1993s] config.status: creating tests/latency_test/Makefile
+[ 1994s] config.status: creating tests/throughput_test/Makefile
+[ 1994s] config.status: creating tools/Makefile
+[ 1994s] config.status: creating tools/daemon/Makefile
+[ 1995s] config.status: creating docs/man/Makefile
+[ 1995s] config.status: creating contrib/scripts/vma.init
+[ 1996s] config.status: creating contrib/scripts/vma.service
+[ 1996s] config.status: creating contrib/scripts/libvma.spec
+[ 1996s] config.status: creating debian/changelog
+[ 1997s] config.status: creating config.h
+[ 1997s] config.status: executing depfiles commands
+[ 1997s] config.status: executing libtool commands
+[ 1998s] 
+[ 1998s] VMA library
+[ 1998s] ============================================================================
+[ 1998s] Version: 9.8.1.0
+[ 1998s] Git: 
+[ 1998s] 
+[ 1998s] + /usr/bin/make -O -j2 V=1 VERBOSE=1 V=1
+[ 1999s] /usr/bin/make  all-recursive
+[ 1999s] Making all in src
+[ 1999s] Making all in utils
+[ 2001s] make[3]: Entering directory '/home/abuild/rpmbuild/BUILD/libvma-9.8.1/src/utils'
+[ 2001s] /bin/sh ../../libtool  --tag=CC   --mode=link gcc  -D_GNU_SOURCE -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -Wall -Wextra -Werror -Wundef                 -ffunction-sections -fdata-sections -Wsequence-point -pipe -Winit-self -Wmissing-include-dirs                 -Wno-free-nonheap-object  -g -O3 -DNDEBUG -fvisibility=hidden -static -Wl,-z,relro   -Wl,-z,now -specs=/usr/lib/rpm/generic-hardened-ld -L/usr/lib64 -o libutils.la   -lrt -lpthread -lrt -ldl -lstdc++ 
+[ 2001s] libtool: link: ar cr .libs/libutils.a 
+[ 2001s] libtool: link: ranlib .libs/libutils.a
+[ 2001s] libtool: link: ( cd ".libs" && rm -f "libutils.la" && ln -s "../libutils.la" "libutils.la" )
+[ 2001s] make[3]: Leaving directory '/home/abuild/rpmbuild/BUILD/libvma-9.8.1/src/utils'
+[ 2001s] Making all in vlogger
+[ 2004s] make[3]: Entering directory '/home/abuild/rpmbuild/BUILD/libvma-9.8.1/src/vlogger'
+[ 2004s] g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src  -I/usr/include  -std=c++11 -D_GNU_SOURCE -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -Wshadow -Wall -Wextra -Werror -Wundef                 -ffunction-sections -fdata-sections -Wsequence-point -pipe -Winit-self -Wmissing-include-dirs                 -Wno-free-nonheap-object  -g -O3 -DNDEBUG -fvisibility=hidden -c -o main.o main.cpp
+[ 2004s] In file included from ../../src/utils/rdtsc.h:41,
+[ 2004s]                  from vlogger.h:49,
+[ 2004s]                  from main.cpp:36:
+[ 2004s] ../../src/utils/asm.h:46:2: error: #error No architecture specific memory barrier definitions found!
+[ 2004s]    46 | #error No architecture specific memory barrier definitions found!
+[ 2004s]       |  ^~~~~
+[ 2004s] ../../src/utils/rdtsc.h: In function 'int gettimefromtsc(timespec*)':
+[ 2004s] ../../src/utils/rdtsc.h:137:17: error: 'gettimeoftsc' was not declared in this scope; did you mean 'gettimeofday'?
+[ 2004s]   137 |                 gettimeoftsc(&tsc_start);
+[ 2004s]       |                 ^~~~~~~~~~~~
+[ 2004s]       |                 gettimeofday
+[ 2004s] ../../src/utils/rdtsc.h:139:9: error: 'gettimeoftsc' was not declared in this scope; did you mean 'gettimeofday'?
+[ 2004s]   139 |         gettimeoftsc(&tsc_now);
+[ 2004s]       |         ^~~~~~~~~~~~
+[ 2004s]       |         gettimeofday
+[ 2004s] make[3]: *** [Makefile:452: main.o] Error 1
+[ 2004s] make[3]: Leaving directory '/home/abuild/rpmbuild/BUILD/libvma-9.8.1/src/vlogger'
+[ 2004s] make[3]: *** Waiting for unfinished jobs....
+[ 2006s] make[3]: Entering directory '/home/abuild/rpmbuild/BUILD/libvma-9.8.1/src/vlogger'
+[ 2006s] /bin/sh ../../libtool  --tag=CXX   --mode=compile g++ -DHAVE_CONFIG_H -I. -I../..  -I../../src  -I/usr/include  -std=c++11 -D_GNU_SOURCE -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong  -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -Wshadow -Wall -Wextra -Werror -Wundef                 -ffunction-sections -fdata-sections -Wsequence-point -pipe -Winit-self -Wmissing-include-dirs                 -Wno-free-nonheap-object  -g -O3 -DNDEBUG -fvisibility=hidden -c -o vlogger.lo vlogger.cpp
+[ 2006s] libtool: compile:  g++ -DHAVE_CONFIG_H -I. -I../.. -I../../src -I/usr/include -std=c++11 -D_GNU_SOURCE -fPIC -O2 -g -grecord-gcc-switches -pipe -fstack-protector-strong -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/generic-hardened-cc1 -fasynchronous-unwind-tables -fstack-clash-protection -fexceptions -Wshadow -Wall -Wextra -Werror -Wundef -ffunction-sections -fdata-sections -Wsequence-point -pipe -Winit-self -Wmissing-include-dirs -Wno-free-nonheap-object -g -O3 -DNDEBUG -fvisibility=hidden -c vlogger.cpp  -fPIC -DPIC -o .libs/vlogger.o
+[ 2006s] make[3]: Leaving directory '/home/abuild/rpmbuild/BUILD/libvma-9.8.1/src/vlogger'
+[ 2006s] In file included from ../../src/utils/rdtsc.h:41,
+[ 2006s]                  from vlogger.h:49,
+[ 2006s]                  from vlogger.cpp:34:
+[ 2006s] ../../src/utils/asm.h:46:2: error: #error No architecture specific memory barrier definitions found!
+[ 2006s]    46 | #error No architecture specific memory barrier definitions found!
+[ 2006s]       |  ^~~~~
+[ 2006s] ../../src/utils/rdtsc.h: In function 'int gettimefromtsc(timespec*)':
+[ 2006s] ../../src/utils/rdtsc.h:137:17: error: 'gettimeoftsc' was not declared in this scope; did you mean 'gettimeofday'?
+[ 2006s]   137 |                 gettimeoftsc(&tsc_start);
+[ 2006s]       |                 ^~~~~~~~~~~~
+[ 2006s]       |                 gettimeofday
+[ 2006s] ../../src/utils/rdtsc.h:139:9: error: 'gettimeoftsc' was not declared in this scope; did you mean 'gettimeofday'?
+[ 2006s]   139 |         gettimeoftsc(&tsc_now);
+[ 2006s]       |         ^~~~~~~~~~~~
+[ 2006s]       |         gettimeofday
+[ 2006s] In file included from ../../src/vma/proto/mem_buf_desc.h:38,
+[ 2006s]                  from ../../src/vma/util/utils.h:47,
+[ 2006s]                  from vlogger.cpp:46:
+[ 2006s] ../../src/utils/atomic.h: In function 'int atomic_fetch_and_inc(atomic_t*)':
+[ 2006s] ../../src/utils/atomic.h:106:16: error: 'atomic_fetch_and_add' was not declared in this scope; did you mean 'atomic_fetch_and_inc'?
+[ 2006s]   106 |         return atomic_fetch_and_add(1, &v->counter);
+[ 2006s]       |                ^~~~~~~~~~~~~~~~~~~~
+[ 2006s]       |                atomic_fetch_and_inc
+[ 2006s] ../../src/utils/atomic.h: In function 'int atomic_fetch_and_dec(atomic_t*)':
+[ 2006s] ../../src/utils/atomic.h:117:16: error: 'atomic_fetch_and_add' was not declared in this scope; did you mean 'atomic_fetch_and_inc'?
+[ 2006s]   117 |         return atomic_fetch_and_add(-1, &v->counter);
+[ 2006s]       |                ^~~~~~~~~~~~~~~~~~~~
+[ 2006s]       |                atomic_fetch_and_inc
+[ 2006s] make[3]: *** [Makefile:468: vlogger.lo] Error 1
+[ 2006s] make[2]: *** [Makefile:387: all-recursive] Error 1
+[ 2006s] make[1]: *** [Makefile:519: all-recursive] Error 1
+[ 2006s] make: *** [Makefile:422: all] Error 2
+[ 2006s] error: Bad exit status from /var/tmp/rpm-tmp.6nyNCx (%build)
+[ 2006s] 
+[ 2006s] RPM build errors:
+[ 2006s]     Bad exit status from /var/tmp/rpm-tmp.6nyNCx (%build)
+[ 2007s] 
+[ 2007s] oerv-obs-10 failed "build _service:tar_scm:libvma.spec" at Sun Mar 31 20:49:42 UTC 2024.
+[ 2007s] 

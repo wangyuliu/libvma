@@ -1,0 +1,142 @@
+From ee85f408afadcdbcaf4b5bafb649a7e9da7540f7 Mon Sep 17 00:00:00 2001
+From: Wenlong Zhang <zhangwenlong@loongson.cn>
+Date: Wed, 22 Feb 2023 17:00:50 +0800
+Subject: [PATCH] add loongarch64 support for libvma
+
+---
+ src/utils/Makefile.am       |  1 +
+ src/utils/asm-loongarch64.h | 96 +++++++++++++++++++++++++++++++++++++
+ src/utils/asm.h             |  2 +
+ 3 files changed, 99 insertions(+)
+ create mode 100644 src/utils/asm-loongarch64.h
+
+diff --git a/src/utils/Makefile.am b/src/utils/Makefile.am
+index 5808729..ae4a33a 100644
+--- a/src/utils/Makefile.am
++++ b/src/utils/Makefile.am
+@@ -5,6 +5,7 @@ libutils_la_LDFLAGS = -static
+ libutils_la_LIBADD = -lrt
+ libutils_la_SOURCES = \
+ 	asm-arm64.h \
++	asm-loongarch64.h \
+ 	asm-ppc64.h \
+ 	asm-x86.h \
+ 	asm.h \
+diff --git a/src/utils/asm-loongarch64.h b/src/utils/asm-loongarch64.h
+new file mode 100644
+index 0000000..55ee563
+--- /dev/null
++++ b/src/utils/asm-loongarch64.h
+@@ -0,0 +1,96 @@
++/*
++ * Copyright (C) 2020-2022 Loongson Technology Corporation Limited
++ *
++ * This software is available to you under a choice of one of two
++ * licenses.  You may choose to be licensed under the terms of the GNU
++ * General Public License (GPL) Version 2, available from the file
++ * COPYING in the main directory of this source tree, or the
++ * BSD license below:
++ *
++ *     Redistribution and use in source and binary forms, with or
++ *     without modification, are permitted provided that the following
++ *     conditions are met:
++ *
++ *      - Redistributions of source code must retain the above
++ *        copyright notice, this list of conditions and the following
++ *        disclaimer.
++ *
++ *      - Redistributions in binary form must reproduce the above
++ *        copyright notice, this list of conditions and the following
++ *        disclaimer in the documentation and/or other materials
++ *        provided with the distribution.
++ *
++ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
++ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
++ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
++ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
++ * BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
++ * ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
++ * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
++ * SOFTWARE.
++ */
++
++
++#ifndef ASMLOONGARCH64_H_
++#define ASMLOONGARCH64_H_
++
++#include <stdint.h>
++#include <unistd.h>
++
++#define COPY_64B_NT(dst, src)  \
++       *dst++ = *src++;        \
++       *dst++ = *src++;        \
++       *dst++ = *src++;        \
++       *dst++ = *src++;        \
++       *dst++ = *src++;        \
++       *dst++ = *src++;        \
++       *dst++ = *src++;        \
++       *dst++ = *src++
++
++#define mb()   asm volatile("dbar 0" ::: "memory")
++#define rmb()  mb()
++#define wmb()  mb()
++#define wc_wmb() wmb()
++
++/**
++ * Add to the atomic variable.
++ * @param i integer value to add.
++ * @param v pointer of type atomic_t.
++ * @return Value before add.
++ */
++static inline int atomic_fetch_and_add(int i, volatile int *ptr)
++{
++       return __atomic_fetch_add(ptr, i, __ATOMIC_ACQUIRE);
++}
++
++/**
++ * Read RDTSC register
++ */
++static inline void gettimeoftsc(unsigned long long *p_tscval)
++{
++       // Read Time Stamp Counter
++       int rID=0;
++       asm volatile("ibar 0" : : : "memory");
++       asm volatile("rdtime.d %0, %1" : "=r" ((unsigned long long)*p_tscval),"=r" (rID));
++}
++
++/**
++ * Cache Line Prefetch - Arch specific!
++ */
++#ifndef L1_CACHE_BYTES
++#define L1_CACHE_BYTES         64
++#endif
++
++static inline void prefetch(void *x)
++{
++       __builtin_prefetch(x, 0, 1);
++}
++
++static inline void prefetch_range(void *addr, size_t len)
++{
++       char *cp = (char*)addr;
++       char *end = (char*)addr + len;
++       for (; cp < end; cp += L1_CACHE_BYTES)
++               prefetch(cp);
++}
++#endif
+diff --git a/src/utils/asm.h b/src/utils/asm.h
+index 78530cc..3afce8d 100644
+--- a/src/utils/asm.h
++++ b/src/utils/asm.h
+@@ -36,6 +36,8 @@
+ 
+ #if defined(__aarch64__)
+ #include "asm-arm64.h"
++#elif defined(__loongarch64)
++#include "asm-loongarch64.h"
+ #elif defined(__powerpc64__)
+ #include "asm-ppc64.h"
+ #elif defined(__x86_64__)
+-- 
+2.33.0
+
